@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Kinopoisk Viewer</string>
+    <string name="film_search">Поиск по фильмам</string>
+    <string name="film_description">Описание</string>
+    <string name="film_genre">Жанры</string>
+    <string name="film_country">Страны</string>
+    <string name="error_message">Произошла ошибка</string>
+    <string name="try_again">Попробовать еще раз</string>
+    <string name="year_s">Год: %s</string>
+    <string name="rating_s">Рейтинг: %s</string>
+    <string name="not_available">Не доступен</string>
+</resources>
