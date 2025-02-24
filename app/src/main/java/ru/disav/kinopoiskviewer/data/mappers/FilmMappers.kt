@@ -5,12 +5,14 @@ import ru.disav.kinopoiskviewer.data.network.dto.FilmDto
 import ru.disav.kinopoiskviewer.models.Film
 
 fun FilmDto.toFilmEntity(): FilmEntity {
+    val ratingFixed = if (rating == "null") null else rating
+
     return FilmEntity(
         filmId = filmId.toString(),
         nameRu = nameRu,
         posterUrlPreview = posterUrlPreview,
         year = year,
-        rating = rating
+        rating = ratingFixed
     )
 }
 
@@ -25,11 +27,13 @@ fun FilmEntity.toFilm(): Film {
 }
 
 fun FilmDto.toFilm(): Film {
+    val ratingFixed = if (rating == "null") null else rating
+
     return Film(
         filmId = filmId,
         nameRu = nameRu.orEmpty(),
         posterUrlPreview = posterUrlPreview.orEmpty(),
         year = year,
-        rating = rating
+        rating = ratingFixed
     )
 }
